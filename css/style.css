@@ -1,0 +1,188 @@
+/* 
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+@meyer-reset @import "includes/typo";
+#header {
+  position: fixed;
+  top: 25px;
+  left: 35px;
+  height: 7vh;
+  overflow: hidden; }
+  #header #logo {
+    float: left; }
+    #header #logo img {
+      height: 100%;
+      margin: 0 20px; }
+  #header #searchbox {
+    float: left; }
+
+#main {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+#header {
+  background: #555;
+  padding: auto;
+  margin: 0;
+  height: 50px;
+  padding: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc; }
+  #header #logo img {
+    display: block; }
+  #header #searchbox {
+    margin-top: 12px; }
+    #header #searchbox form {
+      width: 180px;
+      height: 80px; }
+      #header #searchbox form input {
+        -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.24);
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        width: 160px;
+        height: 25px;
+        border: none;
+        text-align: center;
+        transition: all 0.2s; }
+        #header #searchbox form input:focus {
+          background-color: #fff;
+          margin-left: 0;
+          height: 35px;
+          margin-top: -5px; }
+
+#plot svg {
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 100vh; }
+  #plot svg circle {
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    cursor: hand; }
+  #plot svg .tick line {
+    stroke: lightgrey;
+    opacity: 0.7; }
+  #plot svg text {
+    font-family: "Work Sans", sans-serif;
+    fill: rgba(0, 0, 0, 0.5);
+    pointer-events: none; }
+  #plot svg .flatOp {
+    fill-opacity: 1; }
+  #plot svg .alphaOp {
+    fill-opacity: .1; }
+#plot select {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  padding: 7px;
+  border: 1px solid #CC;
+  font-size: 16px;
+  -webkit-border-radius: .2em;
+  -moz-border-radius: .2em;
+  border-radius: .2em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../img/caret-up.png) no-repeat 95% #EEE;
+  background-size: 10%; }
+
+#scatterplot-modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  transition: all 0.5 linear;
+  width: 450px;
+  border-radius: 5px; }
+  #scatterplot-modal h3 {
+    margin: 0 0px;
+    text-transform: uppercase; }
+  #scatterplot-modal #close-modal {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #fff;
+    text-decoration: none; }
+  #scatterplot-modal ul {
+    -webkit-padding-start: 0px !important;
+    list-style-type: none; }
+  #scatterplot-modal li {
+    padding: 5px;
+    display: inline-block; }
+  #scatterplot-modal li:nth-child(even) {
+    background: rgba(170, 170, 170, 0.9); }
+  #scatterplot-modal li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.9); }
+  #scatterplot-modal a {
+    text-decoration: none;
+    color: #333; }
+  #scatterplot-modal .tab {
+    float: left; }
+  #scatterplot-modal .tabs {
+    position: relative;
+    min-height: 300px;
+    /* This part sucks */
+    clear: both;
+    margin: 25px 0; }
+    #scatterplot-modal .tabs label {
+      padding: 10px;
+      margin-left: -1px;
+      position: relative;
+      left: 1px; }
+    #scatterplot-modal .tabs [type=radio] {
+      display: none; }
+  #scatterplot-modal .content {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    overflow-y: scroll;
+    background: #CCC;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #ccc; }
+  #scatterplot-modal .tabs [type=radio]:checked {
+    background: white;
+    border-bottom: 1px solid white;
+    z-index: 2; }
+  #scatterplot-modal [type=radio]:checked ~ label ~ .content {
+    z-index: 1;
+    background: #000; }
+
+#graphsvg {
+  background: white;
+  width: 100%;
+  max-height: 150px; }
+  #graphsvg text:hover {
+    fill: #259b24; }
+  #graphsvg path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3px;
+    mix-blend-mode: multiply; }
+  #graphsvg text {
+    font-family: "Work Sans", sans-serif;
+    fill: #333;
+    font-size: 12px; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+  font-family: "Work Sans", sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
